@@ -20,8 +20,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/auth/facebook',
-  passport.authenticate('facebook', { profileFields: ['id', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified'] }
-));
+  passport.authenticate('facebook'));
 
 app.get( '/facebook/callback',
   passport.authenticate( 'facebook', {
