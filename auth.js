@@ -12,7 +12,7 @@ passport.use(new FacebookStrategy({
   // profileFields: ['id', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified']
 },
 function(accessToken, refreshToken, profile, cb) {
-  return done(null, profile);
+  return cb(null, profile);
 }));
 
 passport.serializeUser(function(user, done) {
